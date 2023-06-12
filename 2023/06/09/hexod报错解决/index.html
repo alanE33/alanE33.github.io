@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="sansan">
+
+
+    <meta name="subtitle" content="学习与分享">
+
+
+
+
+
+
+<title>Hexo d报错解决 | 茉莉Molise</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/menu.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Molise.
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/tag/">Tags</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/about/">About</a>
+              </li> 
+                   
+          
+          
+            <li class="menu-item search-btn">
+              <a href="#">Search</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+                
+                    <span class="post-tag">
+                        <a href="/tags/hexo/">
+                            hexo
+                        </a>
+                    </span>    
+                           
+            
+        </div>
+        <div class="post-title">
+            
+            
+                Hexo d报错解决
+            
+            
+        </div>
+        <span class="post-date">
+            6月 9, 2023
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <p>使用 <code>hexo d</code> 命令把博客内容推到github上的时候报如下错误：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">fatal: <span class="title">unable</span> <span class="title">to</span> <span class="title">access</span> &#x27;<span class="title">https</span>://<span class="title">github.com</span>/<span class="title">a956551943</span>/<span class="title">a956551943.github.io</span>/&#x27;: <span class="title">Encountered</span> <span class="title">end</span> <span class="title">of</span> <span class="title">file</span></span></span><br><span class="line"><span class="function"><span class="title">FATAL</span> &#123;</span></span><br><span class="line"><span class="function">  <span class="title">err</span>: <span class="title">Error</span>: <span class="title">Spawn</span> <span class="title">failed</span></span></span><br><span class="line"><span class="function">      <span class="title">at</span> <span class="title">ChildProcess</span>.&lt;<span class="title">anonymous</span>&gt; (/<span class="title">usr</span>/<span class="title">local</span>/<span class="title">src</span>/<span class="title">hexo</span>/<span class="title">hanyubolg</span>/<span class="title">node_modules</span>/<span class="title">hexo</span>-<span class="title">util</span>/<span class="title">lib</span>/<span class="title">spawn.js</span>:51:21)</span></span><br><span class="line"><span class="function">      <span class="title">at</span> <span class="title">ChildProcess.emit</span> (<span class="title">events.js</span>:376:20)</span></span><br><span class="line"><span class="function">      <span class="title">at</span> <span class="title">Process.ChildProcess._handle.onexit</span> (<span class="title">internal</span>/<span class="title">child_process.js</span>:277:12) &#123;</span></span><br><span class="line"><span class="function">    <span class="title">code</span>: 128</span></span><br><span class="line"><span class="function">  &#125;</span></span><br><span class="line"><span class="function">&#125; <span class="title">Something</span>&#x27;<span class="title">s</span> <span class="title">wrong</span>. <span class="title">Maybe</span> <span class="title">you</span> <span class="title">can</span> <span class="title">find</span> <span class="title">the</span> <span class="title">solution</span> <span class="title">here</span>: %<span class="title">s</span> <span class="title">https</span>://<span class="title">hexo.io</span>/<span class="title">docs</span>/<span class="title">troubleshooting.html</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol>
+<li>进入博客目录删除 <code>.deploy_git</code> 文件夹</li>
+<li>执行命令 <code>git config --global core.autocrlf false</code> </li>
+<li>重新 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code> </li>
+<li>遇到仍然失败，怀疑网速问题，科学上网后问题解决。</li>
+</ol>
+<hr>
+<blockquote>
+<p>Reference：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/c60ad2a33a1e">Hexo部署出现错误err: Error: Spawn failed解决方式</a></p>
+</blockquote>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+                <div class="icon arrow-left"></div>
+                <div class="post-link">
+                    <a href="/2023/06/10/codeblock%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E6%98%BE%E7%A4%BA/">Prev</a>
+                </div>
+            
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2023/06/09/%E5%AD%97%E4%BD%93%E8%B0%83%E6%95%B4/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+      <div class="search-popup">
+    <div class="search-popup-overlay">  
+    </div>
+    <div class="search-popup-window" >
+        <div class="search-header">
+            <div class="search-input-container">
+              <input autocomplete="off" autocapitalize="off" maxlength="80"
+                     placeholder="Search Anything" spellcheck="false"
+                     type="search" class="search-input">
+            </div>
+            <div class="search-close-btn">
+                <div class="icon close-btn"></div>
+            </div>
+        </div>
+        <div class="search-result-container">
+        </div>
+    </div>
+</div>
+
+<script>
+    const searchConfig = {
+        path             : "/search.xml",
+        top_n_per_article: "1",
+        unescape         : "false",
+        trigger: "auto",
+        preload: "false"
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js"></script>
+<script src="/js/search.js"></script>
+    
+    
+
+  </body>
+</html>

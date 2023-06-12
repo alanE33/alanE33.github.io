@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>My First Blog</title>
+    <url>/2023/04/26/My-First-Blog/</url>
+    <content><![CDATA[<p>尝试建立个人博客啦</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>codeblock无法正常显示</title>
+    <url>/2023/06/10/codeblock%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E6%98%BE%E7%A4%BA/</url>
+    <content><![CDATA[<h2 id="发现"><a href="#发现" class="headerlink" title="发现"></a>发现</h2><p>发现自己blog和作者demo代码块格式显示不同，显示样式为行内代码的样式。</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>查看了作者demo site的文章，检查blog的 <code>_config.yml</code> 的highlight设置，发现之前设置别的主题时，把默认true改成了false，改回true之后重现加载发现显示正常，问题解决！</p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>frame</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo d报错解决</title>
+    <url>/2023/06/09/hexod%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/</url>
+    <content><![CDATA[<p>使用 <code>hexo d</code> 命令把博客内容推到github上的时候报如下错误：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="function">fatal: <span class="title">unable</span> <span class="title">to</span> <span class="title">access</span> &#x27;<span class="title">https</span>://<span class="title">github.com</span>/<span class="title">a956551943</span>/<span class="title">a956551943.github.io</span>/&#x27;: <span class="title">Encountered</span> <span class="title">end</span> <span class="title">of</span> <span class="title">file</span></span></span><br><span class="line"><span class="function"><span class="title">FATAL</span> &#123;</span></span><br><span class="line"><span class="function">  <span class="title">err</span>: <span class="title">Error</span>: <span class="title">Spawn</span> <span class="title">failed</span></span></span><br><span class="line"><span class="function">      <span class="title">at</span> <span class="title">ChildProcess</span>.&lt;<span class="title">anonymous</span>&gt; (/<span class="title">usr</span>/<span class="title">local</span>/<span class="title">src</span>/<span class="title">hexo</span>/<span class="title">hanyubolg</span>/<span class="title">node_modules</span>/<span class="title">hexo</span>-<span class="title">util</span>/<span class="title">lib</span>/<span class="title">spawn.js</span>:51:21)</span></span><br><span class="line"><span class="function">      <span class="title">at</span> <span class="title">ChildProcess.emit</span> (<span class="title">events.js</span>:376:20)</span></span><br><span class="line"><span class="function">      <span class="title">at</span> <span class="title">Process.ChildProcess._handle.onexit</span> (<span class="title">internal</span>/<span class="title">child_process.js</span>:277:12) &#123;</span></span><br><span class="line"><span class="function">    <span class="title">code</span>: 128</span></span><br><span class="line"><span class="function">  &#125;</span></span><br><span class="line"><span class="function">&#125; <span class="title">Something</span>&#x27;<span class="title">s</span> <span class="title">wrong</span>. <span class="title">Maybe</span> <span class="title">you</span> <span class="title">can</span> <span class="title">find</span> <span class="title">the</span> <span class="title">solution</span> <span class="title">here</span>: %<span class="title">s</span> <span class="title">https</span>://<span class="title">hexo.io</span>/<span class="title">docs</span>/<span class="title">troubleshooting.html</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol>
+<li>进入博客目录删除 <code>.deploy_git</code> 文件夹</li>
+<li>执行命令 <code>git config --global core.autocrlf false</code> </li>
+<li>重新 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code> </li>
+<li>遇到仍然失败，怀疑网速问题，科学上网后问题解决。</li>
+</ol>
+<hr>
+<blockquote>
+<p>Reference：<a href="https://www.jianshu.com/p/c60ad2a33a1e">Hexo部署出现错误err: Error: Spawn failed解决方式</a></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python基础语法</title>
+    <url>/2023/04/27/python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<blockquote>
+<p>程序的本质为数据和函数，编程就是编写不同函数去处理数据。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p><code>print(greet + &quot;张三&quot;)</code></p>
+<ul>
+<li>变量名只能由<strong>字母数字下划线</strong>组成，且只能以字母开头</li>
+<li>变量名区分大小写</li>
+<li>建议使用英文小写做变量名且单词间用_分割</li>
+</ul>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p><code># 这是一句注释 </code>     <code>&quot;&quot;&quot;这是一段注释&quot;&quot;&quot;</code> </p>
+<ul>
+<li>使用#号加单句注释</li>
+<li>使用三引号加段落注释</li>
+</ul>
+<h3 id="简单数据类型"><a href="#简单数据类型" class="headerlink" title="简单数据类型"></a>简单数据类型</h3><ul>
+<li>字符型str </li>
+<li>整数int</li>
+<li>浮点型float</li>
+<li>布尔类型bool（包含True 和False，要大写）</li>
+<li>空值类型NoneType（未计划好变量值时，可以先<code>a = None</code> ）</li>
+</ul>
+<blockquote>
+<p>查看变量类型：<code> type(&quot;hello&quot;)</code> </p>
+<p>不同变量类型的转换：<code>int(&quot;666&quot;)</code>  <code>float(&quot;66&quot;)</code>  <code>str(66)</code> </p>
+</blockquote>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p><code>print(&quot;hello&quot; + &quot;world&quot;)</code></p>
+<ul>
+<li>单双引号均可，不要与引号内内容重复</li>
+<li>使用<code>\n </code> 换行</li>
+<li>反斜杠\为转义字符</li>
+<li>可以使用三引号将长段内容引用，三引号内的内容格式不变</li>
+<li>计算字符串长度 <code> len(&#39;hello&#39;)</code> </li>
+<li>提取指定位置字符 <code>&quot;hello&quot;[3]</code> 从零开始数</li>
+</ul>
+<blockquote>
+<p>print语句每使用一次会自动换行，所以如果在print语句结尾含有换行符，则会有一行语句和一个额外空行。</p>
+</blockquote>
+<h3 id="格式化字符串"><a href="#格式化字符串" class="headerlink" title="格式化字符串"></a>格式化字符串</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#format方法</span></span><br><span class="line">text = <span class="string">&quot;hi &#123;0&#125;, your gpa is &#123;1&#125;&quot;</span>.<span class="built_in">format</span>(name,gpa)</span><br><span class="line"></span><br><span class="line"><span class="comment">#f-字符串 </span></span><br><span class="line">name = <span class="string">&quot;andy&quot;</span></span><br><span class="line">gpa = <span class="string">&quot;3&quot;</span></span><br><span class="line">test = <span class="string">f&quot;hi <span class="subst">&#123;name&#125;</span>, your gpa is <span class="subst">&#123;gpa:<span class="number">.2</span>f&#125;</span>&quot;</span> <span class="comment">#.2f表示保留两位小数</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="列表list"><a href="#列表list" class="headerlink" title="列表list"></a>列表list</h3><p><code>shop_list = [&quot;milk&quot;, &quot;cola&quot;]</code></p>
+<ul>
+<li>添加 <code>shop_list.append(&quot;bread&quot;)</code></li>
+<li>删除 <code>shop_list.remove(&quot;bread&quot;)</code></li>
+<li>排序 <code>sorted(num_list)</code> </li>
+<li>最值 <code>max(num_list)   min(num_list)</code> </li>
+<li>列表索引 <code>shop_list[0]</code></li>
+</ul>
+<blockquote>
+<p>注意区分方法与函数，方法为  <code>对象.方法名()</code>   函数为  <code>函数名(对象)</code>  </p>
+<p>注意列表和字典是可变的，前文所列五种简单数据类型和元组不可变</p>
+<p>列表中元素类型可以不同，可以为五种简单数据类型中的任意1种</p>
+</blockquote>
+<h3 id="元组tuple"><a href="#元组tuple" class="headerlink" title="元组tuple"></a>元组tuple</h3><p><code>exam_tuple = (&quot;milk&quot;,&quot;cola&quot;)</code> </p>
+<ul>
+<li><p>元组为圆括号，列表为方括号</p>
+</li>
+<li><p><strong>元组不可变</strong>，故增删改等操作均不适用</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">contacts = &#123;(<span class="string">&quot;张伟&quot;</span>, <span class="number">23</span>):<span class="string">&quot;111&quot;</span>,</span><br><span class="line">            (<span class="string">&quot;张伟&quot;</span>, <span class="number">33</span>):<span class="string">&quot;112&quot;</span>,</span><br><span class="line">            (<span class="string">&quot;张伟&quot;</span>, <span class="number">23</span>):<span class="string">&quot;113&quot;</span>&#125;</span><br><span class="line"><span class="comment">#此时便可以实现区分不同张伟的目的，使用姓名和年龄组成的元组作为键</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="字典dict"><a href="#字典dict" class="headerlink" title="字典dict"></a>字典dict</h3><p><code>contacts  = &#123;&quot;mike&quot;:&quot;119, &quot;joey&quot;:&quot;110&#125;</code> </p>
+<ul>
+<li>字典由键key和值value组成，<strong>键必须由不可变数据类型组成</strong>，所以列表不可以作为键</li>
+<li>字典可变</li>
+<li>查询键对应的值 <code>contacts[&quot;mike&quot;] </code> </li>
+<li>赋值 <code>contacts[&quot;ross&quot;] = &quot;120&quot; </code> </li>
+<li>判断某值是否存在 <code>print(&quot;joey&quot; in contacts)</code> 是返回True，否返回False</li>
+<li>删除 <code>del contacts[&quot;ross&quot;]</code> </li>
+<li>字典键值对个数 <code>len(contacts)</code> </li>
+<li>所有键  <code>contacts.keys()</code> </li>
+<li>所有值   <code>contacts.values()</code> </li>
+<li>所有键值对   <code>contacts.items()</code></li>
+</ul>
+<h2 id="控制结构"><a href="#控制结构" class="headerlink" title="控制结构"></a>控制结构</h2><h3 id="if条件语句"><a href="#if条件语句" class="headerlink" title="if条件语句"></a>if条件语句</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#if语句可以进行嵌套，注意各层之间的缩进保持一致</span></span><br><span class="line"><span class="keyword">if</span> [条件A]:</span><br><span class="line">    <span class="keyword">if</span> [条件B]:</span><br><span class="line">    	[执行语句<span class="number">1</span>]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        [执行语句<span class="number">2</span>] </span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    [执行语句<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#多条件判断</span></span><br><span class="line"><span class="keyword">if</span> [条件<span class="number">1</span>]:</span><br><span class="line">    [语句A]</span><br><span class="line"><span class="keyword">elif</span> [条件<span class="number">2</span>]:</span><br><span class="line">    [语句B]</span><br><span class="line"><span class="keyword">elif</span> [条件<span class="number">3</span>]:</span><br><span class="line">    [语句C]</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    [语句D]</span><br></pre></td></tr></table></figure>
+
+<h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#列表循环</span></span><br><span class="line"><span class="keyword">for</span> temp <span class="keyword">in</span> temp_list:</span><br><span class="line">    <span class="keyword">if</span> temp &gt; <span class="number">38</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;high&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#字典循环        </span></span><br><span class="line"><span class="keyword">for</span> name,temp <span class="keyword">in</span> temp_dict.items():</span><br><span class="line">    <span class="keyword">if</span> temp &gt;<span class="number">38</span>:</span><br><span class="line">        <span class="built_in">print</span>(name)</span><br><span class="line"></span><br><span class="line"><span class="comment">#结合range函数  range函数包含起始值但不包含结束值</span></span><br><span class="line"><span class="built_in">range</span>(<span class="number">5</span>,<span class="number">10</span>,<span class="number">2</span>)   <span class="comment">#5为起始值，10为结束值，2为步长</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>,<span class="number">10</span>,<span class="number">2</span>):</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"><span class="comment">#结果为579 </span></span><br></pre></td></tr></table></figure>
+
+<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> [条件语句]:</span><br><span class="line">    [执行语句<span class="number">1</span>]</span><br><span class="line">    [执行语句<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>for循环在有明确的循环对象或次数时更方便，while更加通用，尤其在无法确定循环次数时。</p>
+</blockquote>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#定义函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">函数名</span>(<span class="params">参数名</span>):</span><br><span class="line">    [具体函数定义代码]</span><br><span class="line">    <span class="keyword">return</span> 变量</span><br><span class="line"></span><br><span class="line"><span class="comment">#调用函数</span></span><br><span class="line">函数名( )</span><br></pre></td></tr></table></figure>
+
+<h3 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h3><ul>
+<li>与（and） 一否为否，全正为正</li>
+<li>或（or）一正为正，全否为否</li>
+<li>非（not）</li>
+</ul>
+<blockquote>
+<p><strong>优先级顺序很重要</strong>： not &gt; and &gt; or</p>
+</blockquote>
+<h3 id="交互式"><a href="#交互式" class="headerlink" title="交互式"></a>交互式</h3><p><code>name = input(&quot;请输入你的名字：&quot;)</code> </p>
+<blockquote>
+<p>利用input函数得到的值为<strong>字符型</strong>，故应当注意类型转化问题 如输入身高之类的应当进行转换。</p>
+</blockquote>
+<h3 id="模块引入"><a href="#模块引入" class="headerlink" title="模块引入"></a>模块引入</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#import语句</span></span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="built_in">print</span>(math.sqrt(<span class="number">16</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#from...import...</span></span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</span><br><span class="line"><span class="built_in">print</span>(sqrt(<span class="number">16</span>))  <span class="comment">#这种方法引用时，不需要带模块名</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>python自带的模块可直接import，此外其他开发者编写的第三方库则需要先安装即pip install 库名</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">下划线命名法</th>
+<th align="center">Pascal命名法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">适用范围</td>
+<td align="center">适用于变量名</td>
+<td align="center">适用于类名</td>
+</tr>
+<tr>
+<td align="center">举例</td>
+<td align="center">user_name</td>
+<td align="center">UserAccount</td>
+</tr>
+<tr>
+<td align="center">举例</td>
+<td align="center">total_list</td>
+<td align="center">CustomerOrder</td>
+</tr>
+</tbody></table>
+<h2 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ul>
+<li>面向对象编程（OOP）与面向过程编程（POP）为两种不同的编程思想</li>
+<li>面向对象编程的三大基本特性：封装、继承、多态<ul>
+<li>封装：把客观事物封装成抽象的类</li>
+<li>继承：类对象可以获得另一个类对象的属性和方法</li>
+<li>多态：类方法在不同情形下可以有不同表现形式</li>
+</ul>
+</li>
+<li>面向对象编程需要把<strong>数据</strong>和<strong>函数</strong>两概念归集到主体的<strong>属性</strong>和<strong>功能</strong>上。</li>
+</ul>
+<h3 id="定义类"><a href="#定义类" class="headerlink" title="定义类"></a>定义类</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#定义类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Atm</span>:  <span class="comment">#类的命名方法使用Pascal命名法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, 编号, 银行, 支行</span>):  <span class="comment">#定义属性</span></span><br><span class="line">        self.编号 = 编号</span><br><span class="line">        self.银行 = 银行</span><br><span class="line">        self.支行 = 支行  </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">save</span>(<span class="params">self, money</span>):  <span class="comment">#定义方法</span></span><br><span class="line">        <span class="comment">#下面为方法定义代码</span></span><br><span class="line"><span class="comment">#创建对象</span></span><br><span class="line">atm1 = Atm(<span class="string">&quot;001&quot;</span>, <span class="string">&quot;招商银行&quot;</span>, <span class="string">&quot;南园支行&quot;</span>)</span><br><span class="line">atm2 = Atm(<span class="string">&quot;002&quot;</span>, <span class="string">&quot;中国银行&quot;</span>, <span class="string">&quot;北园支行&quot;</span>)</span><br><span class="line"><span class="comment">#调用方法</span></span><br><span class="line">atm1.save(<span class="number">300</span>)</span><br><span class="line"><span class="comment">#调用属性</span></span><br><span class="line">atm1.银行</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#类继承</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">类名</span>(<span class="title class_ inherited__">父类名</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name.sex</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__(name,sex) <span class="comment">#继承父类的部分属性</span></span><br><span class="line">        self.has_tail = <span class="literal">False</span></span><br><span class="line">        </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">方法名</span>(<span class="params">self</span>):</span><br><span class="line">        ...</span><br><span class="line">        </span><br><span class="line"><span class="comment">#方法调用逻辑为：优先看所属的类有没有调用的方法，没有时，向上找父类的同名方法。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="文件读写"><a href="#文件读写" class="headerlink" title="文件读写"></a>文件读写</h2><h3 id="文件路径"><a href="#文件路径" class="headerlink" title="文件路径"></a>文件路径</h3><ul>
+<li>绝对路径   根目录 C:\</li>
+<li>相对路径(从某个参考位置出发）参考位置的路径为.  其父级为..  父级的父级为..&#x2F;..  子级为.&#x2F;data  （其中 .&#x2F; 可以省略</li>
+</ul>
+<h3 id="文件读取"><a href="#文件读取" class="headerlink" title="文件读取"></a>文件读取</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#打开文件</span></span><br><span class="line"><span class="built_in">open</span>(<span class="string">&quot;/usr/demo/data.txt&quot;</span>,<span class="string">&quot;r&quot;</span>,encoding = <span class="string">&quot;UTF-8&quot;</span>)</span><br><span class="line"><span class="comment">#第一个参数为文件路径绝对相对均可</span></span><br><span class="line"><span class="comment">#第二个参数为读取模式，r为只读模式，w为只写模式，a附加模式</span></span><br><span class="line"><span class="comment">#第三个参数为编码方式</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#文件读取</span></span><br><span class="line"><span class="built_in">print</span>(f.read()) <span class="comment">#读取文件所有内容，返回字符串</span></span><br><span class="line"><span class="built_in">print</span>(f.read())</span><br><span class="line"><span class="comment">#第二次打印结果为空，因为第一次读取后已定位至文件末尾，无新内容可读</span></span><br><span class="line"><span class="built_in">print</span>(f.read(<span class="number">10</span>)) <span class="comment">#表示读取前10个字符</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(f.readline())</span><br><span class="line"><span class="comment">#读取一行文件内容，读到换行符时结束，换行符\n也会被打印</span></span><br><span class="line"></span><br><span class="line">lines = f.readlines()</span><br><span class="line"><span class="comment">#读取文件所有内容并返回以每行字符串组成的列表</span></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> lines:  <span class="comment">#遍历所有行</span></span><br><span class="line">    <span class="built_in">print</span>(line)  <span class="comment">#依次打印</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">#文件关闭</span></span><br><span class="line">f.close()  <span class="comment">#读取完之后关闭文件，释放资源</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#打开关闭文件的第二种方法</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;./data.txt&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="built_in">print</span>(f.read())</span><br><span class="line">    ...</span><br><span class="line"><span class="comment">#该方法执行完缩进下的语句后会自动关闭文件</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="文件写入"><a href="#文件写入" class="headerlink" title="文件写入"></a>文件写入</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">open</span>(<span class="string">&quot;./demo/data.txt&quot;</span>,<span class="string">&quot;w&quot;</span>,encoding = <span class="string">&quot;UTF-8&quot;</span>)</span><br><span class="line"><span class="comment">#如果文件不存在不会报错而是会新建一个文件，如果文件存在会清空原始内容并写入</span></span><br><span class="line"><span class="built_in">open</span>(<span class="string">&quot;./demo/data.txt&quot;</span>,<span class="string">&quot;a&quot;</span>,encoding = <span class="string">&quot;UTF-8&quot;</span>)</span><br><span class="line"><span class="comment">#会在文件原始内容后附加新写入的内容</span></span><br><span class="line"><span class="built_in">open</span>(<span class="string">&quot;./demo/data.txt&quot;</span>,<span class="string">&quot;r+&quot;</span>,encoding = <span class="string">&quot;UTF-8&quot;</span>)</span><br><span class="line"><span class="comment">#r+模式下，文件同时支持读写，相当于r+a模式</span></span><br><span class="line"></span><br><span class="line">f.write(<span class="string">&quot;hello\n&quot;</span>)</span><br><span class="line"><span class="comment">#write函数不会自动换行，如需换行需要手动加上换行符</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#try后加可能会产生错误的代码，except后加预判的错误类型即对应操作</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    user_weight = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入体重（kg）：&quot;</span>))</span><br><span class="line">    user_height = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入身高（m）：&quot;</span>))</span><br><span class="line">    user_BMI = user_weight / user_height ** <span class="number">2</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">except</span> ValueError:         <span class="comment">#产生值错误时运行</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;输入数字不合理，请重新运行程序，并输入正确数字。&quot;</span>)</span><br><span class="line"><span class="keyword">except</span> ZeroDivisionError:  <span class="comment">#产生值错误时运行</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;身高不能为零，请重新运行程序，并输入正确数字。&quot;</span>)    </span><br><span class="line"><span class="keyword">except</span>:                    <span class="comment">#产生其它错误时运行</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;发生了未知错误，请重新运行程序。&quot;</span>)</span><br><span class="line">    </span><br><span class="line"><span class="keyword">else</span>:     <span class="comment">#没有错误时运行</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;您的BMI值为：&quot;</span> + <span class="built_in">str</span>(user_BMI))</span><br><span class="line">    </span><br><span class="line"><span class="keyword">finally</span>:  <span class="comment">#无论程序是否存在错误都会执行的语句</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;程序运行结束。&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#实现代码文件：sentence.py 测试代码：test_sentence.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> unittest  <span class="comment">#导入测试库</span></span><br><span class="line"><span class="keyword">from</span> sentence <span class="keyword">import</span> Sentence  </span><br><span class="line"><span class="comment">#从文件sentence导入要测试的类Sentence</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TestSentence</span>(unittest.TestCase):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">test_str_count</span>(<span class="params">self</span>):</span><br><span class="line">        sentence = Sentence(<span class="string">&quot;hello world&quot;</span>)</span><br><span class="line">        self.assertEqual(sentence.str_count(),<span class="number">12</span>)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">test_word_count</span>(<span class="params">self</span>):</span><br><span class="line">        sentence = Sentence(<span class="string">&quot;hello world&quot;</span>)</span><br><span class="line">        self.assertEqual(sentence.word_count(),<span class="number">2</span>)</span><br><span class="line">     <span class="comment">#测试用例需要以test开头，这样unittest库才能识别   </span></span><br><span class="line"></span><br><span class="line"><span class="comment">#可以注意到每个测试都需要先建立测试所需句子，且可以相同，此时可以使用setup语句简化</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TestSentence</span>(unittest.TestCase):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">setUp</span>(<span class="params">self</span>):</span><br><span class="line">        self.sentence = Sentence(<span class="string">&quot;hello world&quot;</span>)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">test_str_count</span>(<span class="params">self</span>):</span><br><span class="line">        self.assertEqual(self.sentence.str_count(),<span class="number">12</span>)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">test_word_count</span>(<span class="params">self</span>):</span><br><span class="line">        self.assertEqual(self.sentence.word_count(),<span class="number">2</span>)</span><br><span class="line">        </span><br><span class="line"><span class="comment">#测试文件写好后，打开终端输入测试命令 python -m unittest 进行测试</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo基本操作命令</title>
+    <url>/2023/04/26/hexo%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p>介绍了hexo框架的<strong>基本操作命令</strong>。</p>
+<span id="more"></span>
+
+<h2 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo n &quot;博客名称&quot; 新建一篇文章</span><br><span class="line">hexo clean 清理缓存</span><br><span class="line">hexo g 生成静态文件</span><br><span class="line">hexo s 启用服务器，查看文章效果</span><br><span class="line">hexo d 部署到远端</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h2><ul>
+<li>选择好看的主题样式</li>
+<li>git clone 到本地或者直接下载zip</li>
+<li>保存至themes文件夹下</li>
+<li>修改_config.yml文件中的theme</li>
+</ul>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语口语提升</title>
+    <url>/2023/05/04/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD%E6%8F%90%E5%8D%87/</url>
+    <content><![CDATA[<h2 id="口语最基础内容"><a href="#口语最基础内容" class="headerlink" title="口语最基础内容"></a>口语最基础内容</h2><ul>
+<li>26个英文字母</li>
+<li>大概的音标发音</li>
+<li>几种简单句的句型结构（陈述句，否定句，一般疑问句，特殊疑问句及其回答。）</li>
+<li>句子的构成：主谓宾</li>
+</ul>
+<p>本文主要针对的是有一定英语基础，考试也马马虎虎，但是遇到外国友人就沉默的朋友们。</p>
+<p>勇气，语言环境加练习是很重要的。</p>
+<h2 id="方法介绍"><a href="#方法介绍" class="headerlink" title="方法介绍"></a>方法介绍</h2><ol>
+<li><p>讲。直接讲。想到什么就讲。哪怕是蹦单词也要讲。<br>这一点就是勇气和自信。就像做错也比没做好。你讲错也比不敢讲要好。只有你尝试着开口讲了，你后续才有可能改正和进步。</p>
+</li>
+<li><p>学英语是一件有趣的事情，不要让它变得枯燥了。把学习英语融入到生活中，融入到你的兴趣中。<br>想必大家都有这种体会，想学好英语，天天捧着单词书背，但是没背两天就放弃了。过好久又拿出来背，但是没多久又放弃了。周而复始，永远只停留在abandon。因为背单词的过程很枯燥，所以很难坚持。对我这种唯兴趣论，没有监督，是真的很难坚持下来。不妨转变下思维。英语早就渗透在我们生活的方方面面了。电影，英美剧，小说，英文歌……比比皆是。挑一个你感兴趣的方向，每天做一点。比如我本人，从上大学以后，就只听英文歌，有两年时间每天什么都不做也会看几集美剧。我觉得这一点的作用就是保持你对英语的乐趣，以及把学英语这件事融入到你的日常生活里。相当于给自己创造了一种语言环境。</p>
+</li>
+<li><p>说英语的时候，加点感情。<br>栋栋说很多英语学习者的通病就是说英语永远在一个调上。毫无波澜。但是我们讲中文的时候，一定是有感情的。所以，他提出在你讲一句英文的时候，加点感情。一开始不适应的话，想想如果是中文，你会是什么样的语气，然后把这种语气加到英文里。我尝试以后的感受是立竿见影！我整个人都鲜活了起来哈哈哈哈。</p>
+</li>
+<li><p>模仿。<br>人都有好奇心嘛。我在第一次听到栋栋的口语的时候，心里就抑制不住对他的好奇。他到底悄咪咪的做了什么学了什么，口语能这么好呢！所以我就揣着好奇心厚着脸皮去问他了。他给我讲完上面三点以后，告诉了我真相。</p>
+<p>他说可以找自己喜欢的电影看，尝试模仿电影中的台词。他强调在模仿的初期，一定要讲的很慢很慢很慢很慢，仔细地斟酌每个音节的转换，把每个音节都发标准。</p>
+</li>
+</ol>
+<h2 id="个人体会"><a href="#个人体会" class="headerlink" title="个人体会"></a>个人体会</h2><p>我真正开始学英语的时候是初一。因为英语老师很爱笑，每天的衣服都不一样，讲阅读理解的时候会给我们分享她生活中相关的故事，所以我和很多同学当时都巨喜欢英语。每天放学后，我和一个同学骑车回家，我们特别喜欢用英语对话，什么都聊。尽管我们的词汇量大概也就50-100的样子，我们还是能聊完从学校到家这小二十分钟。内容包括但不限于学校家庭周末。为什么词汇量这么少的情况下，我们却能聊这么多呢？我们那会儿为了能让对话持续下去，遇到不会讲的词就用会讲的词来描述它。如果有影像记录的话，现在看肯定是错误百出的，不管是语法还是单词。</p>
+<p>但是这一段经历对我的英语口语帮助是巨大的。第一，它让我很敢讲英语。不会觉得讲英语羞耻。第二，培养了我的英语思维。它让我觉得讲英语就像说中文一样的自然。我不会在讲英语的之前先想中文然后再翻译。我直接就可以讲英语。第三，它让我学会用已知的词描述未知的词。那时候没有电子词典也懒得翻大字典。学校里学到的单词就那么点。词汇量和现在普通大学生是没法比的。但是我们凭借着初生牛犊不怕虎的勇气和机智，描述了一切我们会讲到的东西。</p>
+<p>还有一个例子来自我一位外教，里安老师。（保护隐私就这样音译了，希望老师见谅。）里安说，在他学中文初期，很想提高自己的中文日常沟通能力，于是，就把自己日常生活中能够会用到的一切事物都转换成中文记忆。比如去买菜，那就记住了“西红柿，黄瓜，苹果……”。以至于有一次他回国，打死想不起一个蔬菜的英文，一个劲儿地和别人重复“西红柿西红柿”。：）</p>
+<p>关于这个我有个类似的经验，很长一段时间我想不起“thanksgiving day”的中文……</p>
+<p>也有很多人问我怎么练的口语，除了上述的方法，我最常用也是最有效的是在实践中学习。大学期间我参加过无数的志愿者活动，包括目前在做的工作，都是要和外国友人交流的。提高最快的一段时间就是我交了个外国闺蜜，木兰。有一次我去参加他们的一个斋戒月晚餐，听完十几个人从殖民到笑话到晚餐等各种话题的讨论后，我的听力和口语仿佛得到了质的飞跃。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="普适版"><a href="#普适版" class="headerlink" title="普适版"></a>普适版</h3><ol>
+<li><p>要敢讲。不要怕犯错。</p>
+</li>
+<li><p>把学英语融入到生活中，看美剧看电影，听歌看书都成。关键是保持学英语的乐趣。</p>
+</li>
+<li><p>给你讲的每一句英语中加点感情。</p>
+</li>
+<li><p>尝试着模仿你喜欢的台词。要慢，仔细感受每个音节的变化。</p>
+</li>
+<li><p>遇到不会的单词换种方式描述。</p>
+</li>
+<li><p>把日常生活中会用到的一切单词换成英语来记忆。</p>
+</li>
+</ol>
+<h3 id="速成版"><a href="#速成版" class="headerlink" title="速成版"></a>速成版</h3><ol>
+<li>找个外国友人聊。（谈恋爱的话要慎重啊。且不说文化差异，想像一下那个画面“你根本就不喜欢我，你跟我在一起就是为了学英语！”。本着不影响国际关系的原则，慎重。）</li>
+<li>去英语国家，融入当地生活个把个月。</li>
+<li>把每一句要说出口的话转换成英语。</li>
+</ol>
+<hr>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>字体调整</title>
+    <url>/2023/06/09/%E5%AD%97%E4%BD%93%E8%B0%83%E6%95%B4/</url>
+    <content><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>使用Frame主题时，正文内容字体较大，如何调整字号</p>
+<h2 id="探索过程"><a href="#探索过程" class="headerlink" title="探索过程"></a>探索过程</h2><ol>
+<li><p>首先打开主题文件，判断字体文件应该在css或fonts文件夹下</p>
+</li>
+<li><p>打开fonts文件夹发现只有字体文件</p>
+</li>
+<li><p>推断应该在css文件夹，打开查看</p>
+</li>
+<li><p>发现有<code> font.styl</code> 文件，查看有 <code>font-size $font-size-body</code> 代码，推测应当修改body字体</p>
+</li>
+<li><p>查看文件夹内其他文件找到 <code>variable.styl</code> 中有font size设置，找到 <code>font-size-body</code> 处修改，原始设定为16px，修改成14px符合要求</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>博客美化</tag>
+      </tags>
+  </entry>
+</search>
